@@ -7,7 +7,8 @@ public class singlenum {
             result = result^nums[i];
         }
         return result;
-	}
+        //ldfs;kf;kdslfslfs
+	}//zdlf;sd
 	
 	public static void main(String args[]) {
 		singlenum obj = new singlenum();
