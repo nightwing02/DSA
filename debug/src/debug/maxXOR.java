@@ -1,10 +1,13 @@
 class Solution {
     public int findMaximumXOR(int[] nums) {
         int n = nums.length;
-        int[] result = new int[n];
+        int resultSize = n * (n - 1) / 2;  // Since we are storing XOR of each pair once
+        int[] result = new int[resultSize];
+        int index = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                result[i] = nums[i] ^ nums[j];
+            for (int j = i+1; j < n; j++) {
+                result[index] = nums[i] ^ nums[j];
+                index++;
             }
         }
         int max = 0;
